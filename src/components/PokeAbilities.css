@@ -1,0 +1,6 @@
+.text2 p:nth-child(1){
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-weight: bold;
+}
