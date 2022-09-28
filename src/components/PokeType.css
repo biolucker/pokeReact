@@ -1,6 +1,26 @@
-.text p {
-    display: flex;
+:root 
+
+.text  {
+
     justify-content: center;
     margin: 10px;
     font-weight: bold;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+.button {
+    height: 2em;
+    width: 5em;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+    cursor: pointer;
+    padding: 5px;
 }

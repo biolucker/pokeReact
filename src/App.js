@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import PokeAbilities from './components/PokeAbilities';
+import PokeStats from './components/PokeStats';
 import PokeStatsData from './components/PokeStatsData';
 import PokeType from './components/PokeType';
 import SearchBar from './components/SearchBar';
@@ -39,7 +40,7 @@ function App() {
           setSearchInput={setSearchInput}
           setPokemonName={setPokemonName}
           setPokemonSprite={setPokemonSprite}
-          setpokemonDataObject={setPokemonDataObject}
+          setPokemonDataObject={setPokemonDataObject}
         />
       </header>
       {pokemonDataObject && <main className='main'>
@@ -49,24 +50,16 @@ function App() {
             src={pokemonSprite ? pokemonSprite : ''}
             alt="pokemon-sprite"
           />
-          <PokeType />
+          <PokeType types={pokemonDataObject.types} />
           <PokeAbilities />
         </section>
         <article className='Stats'>
-        <div className='StatsText'>
-         <p>HP:</p>
-         <p>Attack:</p>
-         <p>Defense:</p>
-         <p>Sp. Atk:</p>
-         <p>Sp. Def:</p>
-         <p>Speed:</p>
-        </div>
+          <PokeStats stats={pokemonDataObject.stats}/>
           {
             // Aqui va la grafica
           }
           <PokeStatsData stats={pokemonDataObject.stats} />
         </article>
-
       </main>}
     </div>
 
